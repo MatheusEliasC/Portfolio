@@ -1,5 +1,7 @@
 package br.com.matheliasc.biblioteca.model;
 
+import br.com.matheliasc.biblioteca.model.enums.SituacaoLivro;
+import br.com.matheliasc.biblioteca.model.enums.TipoMidiaLivro;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
@@ -28,6 +30,8 @@ public class Livro {
 
     @Enumerated(EnumType.STRING)
     private final SituacaoLivro situacao = SituacaoLivro.DISPONIVEL;
+    @Enumerated(EnumType.STRING)
+    private final TipoMidiaLivro tipoMidia;
 
     @OneToMany
     private List<Autor> autores = new ArrayList<>();

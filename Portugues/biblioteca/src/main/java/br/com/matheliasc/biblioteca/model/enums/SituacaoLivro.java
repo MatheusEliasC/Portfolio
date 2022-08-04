@@ -1,4 +1,4 @@
-package br.com.matheliasc.biblioteca.model;
+package br.com.matheliasc.biblioteca.model.enums;
 
 public enum SituacaoLivro {
 

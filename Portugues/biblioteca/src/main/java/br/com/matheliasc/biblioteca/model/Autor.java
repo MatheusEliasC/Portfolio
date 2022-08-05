@@ -1,5 +1,6 @@
 package br.com.matheliasc.biblioteca.model;
 
+import br.com.matheliasc.biblioteca.model.enums.GeneroAutor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -17,6 +18,7 @@ public class Autor {
     private Long id;
 
     private String nome;
+    private GeneroAutor genero;
     private String cpf;
     private Integer idade;
     private String email;

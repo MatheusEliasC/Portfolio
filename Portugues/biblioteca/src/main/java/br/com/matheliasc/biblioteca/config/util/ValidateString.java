@@ -1,4 +1,4 @@
-package br.com.matheliasc.biblioteca.util;
+package br.com.matheliasc.biblioteca.config.util;
 
 import javax.validation.Payload;
 

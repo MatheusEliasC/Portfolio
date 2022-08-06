@@ -2,7 +2,7 @@ package br.com.matheliasc.biblioteca.controller.form;
 
 import br.com.matheliasc.biblioteca.model.Autor;
 import br.com.matheliasc.biblioteca.model.enums.GeneroAutor;
-import br.com.matheliasc.biblioteca.util.ValidateString;
+import br.com.matheliasc.biblioteca.config.util.ValidateString;
 import lombok.Data;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -24,7 +24,6 @@ public class AutorForm {
     private String email;
     @NotBlank
     private String contato;
-    @NotBlank
     private String website;
 
     public Autor converterFormParaAutor(){

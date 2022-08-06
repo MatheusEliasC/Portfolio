@@ -1,4 +1,4 @@
-package br.com.matheliasc.biblioteca.util;
+package br.com.matheliasc.biblioteca.config.util;
 
 import java.util.ArrayList;
 import java.util.List;

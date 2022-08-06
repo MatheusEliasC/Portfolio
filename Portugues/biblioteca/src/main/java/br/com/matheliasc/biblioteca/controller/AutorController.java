@@ -22,9 +22,9 @@ public class AutorController {
     private AutorRepository autorRepository;
 
     @GetMapping
-    public List<AutorDTO> listaAutor(){
+    public ResponseEntity<List<AutorDTO>> listaAutor(){
         List<Autor> listaAutores = autorRepository.findAll();
-        return listaAutores.stream().map(AutorDTO::new).collect(Collectors.toList());
+        return ResponseEntity.ok(listaAutores.stream().map(AutorDTO::new).collect(Collectors.toList()));
     }
 
     @PostMapping

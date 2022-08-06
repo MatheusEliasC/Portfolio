@@ -1,7 +1,9 @@
 package br.com.matheliasc.biblioteca.controller.dto;
 
 import br.com.matheliasc.biblioteca.model.Editora;
+import lombok.Data;
 
+@Data
 public class EditoraDTO {
 
     private Long id;

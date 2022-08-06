@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +28,7 @@ public class AutorController {
     }
 
     @PostMapping
-    public ResponseEntity<AutorDTO> gravaAutor(@RequestBody AutorForm autorForm, UriComponentsBuilder uriBuilder){
+    public ResponseEntity<AutorDTO> gravaAutor(@RequestBody @Valid AutorForm autorForm, UriComponentsBuilder uriBuilder){
             Autor autor = autorRepository.save(autorForm.converterFormParaAutor());
             URI uri = uriBuilder.path("/autores/{id}").buildAndExpand(autor.getId()).toUri();
             return ResponseEntity.created(uri).body(new AutorDTO(autor));

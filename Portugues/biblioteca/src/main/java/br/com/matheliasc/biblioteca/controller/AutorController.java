@@ -28,15 +28,8 @@ public class AutorController {
 
     @PostMapping
     public ResponseEntity<AutorDTO> gravaAutor(@RequestBody AutorForm autorForm, UriComponentsBuilder uriBuilder){
-        try{
             Autor autor = autorRepository.save(autorForm.converterFormParaAutor());
             URI uri = uriBuilder.path("/autores/{id}").buildAndExpand(autor.getId()).toUri();
             return ResponseEntity.created(uri).body(new AutorDTO(autor));
-        }
-        catch (Exception e){
-            System.out.println(e.getCause() + " " + e.getMessage());
-        }
-
-        return ResponseEntity.internalServerError().build();
     }
 }

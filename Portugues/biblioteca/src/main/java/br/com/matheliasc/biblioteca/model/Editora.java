@@ -1,5 +1,7 @@
 package br.com.matheliasc.biblioteca.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -8,7 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@RequiredArgsConstructor
+@Builder
+@AllArgsConstructor
 @Entity
 public class Editora {
 

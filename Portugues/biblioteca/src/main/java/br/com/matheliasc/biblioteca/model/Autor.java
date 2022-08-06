@@ -10,7 +10,6 @@ import java.util.List;
 @Data
 @Builder
 @AllArgsConstructor
-@RequiredArgsConstructor
 @Entity
 public class Autor {
 
